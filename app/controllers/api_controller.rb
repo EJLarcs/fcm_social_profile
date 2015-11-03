@@ -31,9 +31,3 @@ class ApiController < ApplicationController
   end
 
 end
-
-
-string = "this is a string"
-string.slice!(2)        #=> "i"
-string.slice!(3..6)     #=> " is "
-string.slice!(/s.*t/)   #=> "sa st"
