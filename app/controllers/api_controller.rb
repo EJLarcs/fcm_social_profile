@@ -20,7 +20,7 @@ class ApiController < ApplicationController
    url_array = url.split("")
    i = nil
    url_array.each_with_index{|v, k| i = k if v == "/"}
-   filename = url[i..-1]
+   filename = url[i+1..-1]
    if response.success?
      File.open("#{filename}", "wb") do |f|
        f.write response.parsed_response
